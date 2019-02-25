@@ -53,8 +53,6 @@
                 description
             }
 
-            console.log(name)
-
             if( nameInput.value === "" && descriptionInput.value === "" ) {
               emptyName.innerHTML = `<p style="margin-top: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; padding: 5px;color: #FFF; background-color: #FF0000" >Debe ingresar un Nombre</p>`
               emptyDescription.innerHTML = `<p style="margin-top: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; padding: 5px;color: #FFF; background-color: #FF0000" >Debe ingresar una descriptión</p>`
@@ -69,22 +67,6 @@
                   localStorage.setItem('tasks', JSON.stringify(tasks))
               }
             }
-
-            // if( nameInput.value === "" && descriptionInput.value === "" ) {
-            //   emptyName.innerHTML = `<p style="margin-top: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; padding: 5px;color: #FFF; background-color: #FF0000" >Debe ingresar un Nombre</p>`
-            //   emptyDescription.innerHTML = `<p style="margin-top: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; padding: 5px;color: #FFF; background-color: #FF0000" >Debe ingresar una descriptión</p>`
-            // }else {
-            //   if( localStorage.getItem('tasks') === null ) {
-            //       let tasks = []
-            //       tasks.push(task)
-            //       localStorage.setItem('tasks', JSON.stringify(tasks))
-            //   }else {
-            //       let tasks = JSON.parse(localStorage.getItem('tasks'))
-            //       tasks.push(task)
-            //       localStorage.setItem('tasks', JSON.stringify(tasks))
-            //   }
-            // }
-
 
             getTasks()
             taskForm.reset()
